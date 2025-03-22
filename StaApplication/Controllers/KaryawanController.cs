@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using StaApplication.Data;
 using StaApplication.Models;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace StaApplication.Controllers
 {

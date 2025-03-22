@@ -37,7 +37,12 @@
             <td>
                 <a asp-action="Edit" asp-route-id="@item.IDKaryawan">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.IDKaryawan">Details</a> |
-                <a asp-action="Delete">Delete</a>
+                <form asp-action="Delete" method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="@item.IDKaryawan" name="id" />
+                    <button class="bg-transparent border-0" style="color:steelblue;text-decoration:underline;" type="submit" value="Delete">Delete</button>
+                </form>
+                
             </td>
         </tr>
 }
