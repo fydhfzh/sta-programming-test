@@ -1,0 +1,49 @@
+﻿@model IEnumerable<StaApplication.Models.Karyawan>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NmKaryawan)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TglMasukKerja)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Usia)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NmKaryawan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TglMasukKerja)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Usia)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IDKaryawan">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.IDKaryawan">Details</a> |
+                <a asp-action="Delete">Delete</a>
+            </td>
+        </tr>
+}
+
+    </tbody>
+</table>
+<script>
+    
+</script>
